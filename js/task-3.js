@@ -1,21 +1,21 @@
 function filterArray(numbers, value) {//* Оголошуємо функцію*/ 
 
- //* Створюємо порожній масив для чисел/
-let resultArray = [];
+  //* Створюємо порожній масив для чисел/
+  let resultArray = [];
 
-   //* Проходимо циклом по кожнму елементу масиву/
- for (let i = 0; i < numbers.length; i++) {
-  
-//*Перевірка, чи поточний елемент більший за задане значення
-  if (numbers[i] > value) {
+  //* Проходимо циклом по кожнму елементу масиву/
+  for (let i = 0; i < numbers.length; i++) {
 
-    //* Додаємо поточне число до масиву
-    resultArray.push(numbers[i]);
-}
-}
-//* Повертаємо масив чисел*/
-return resultArray;
+    //*Перевірка, чи поточний елемент більший за задане значення
+    if (numbers[i] > value) {
+
+      //* Додаємо поточне число до масиву
+      resultArray.push(numbers[i]);
+    }
   }
+  //* Повертаємо масив чисел*/
+  return resultArray;
+}
 
 //~ (i < numbers.length;) каже, що ми хочемо ітерувати кожен елемент масиву numbers, а не порівнювати його зі значенням value.
 //~Умова (i < numbers.length) означає, що цикл буде продовжуватися, доки i менше довжини масиву numbers.
@@ -27,9 +27,9 @@ return resultArray;
 //~Якщо value менше, ніж довжина масиву numbers, то цикл буде виконуватися, але не для кожного елемента масиву numbers.
 
 
-  console.log(filterArray([1, 2, 3, 4, 5], 3)); // [4, 5]
-  console.log(filterArray([1, 2, 3, 4, 5], 4)); // [5]
-  console.log(filterArray([1, 2, 3, 4, 5], 5)); // []
-  console.log(filterArray([12, 24, 8, 41, 76], 38)); // [41, 76]
-  console.log(filterArray([12, 24, 8, 41, 76], 20)); // [24, 41, 76]
+console.log(filterArray([1, 2, 3, 4, 5], 3)); // [4, 5]
+console.log(filterArray([1, 2, 3, 4, 5], 4)); // [5]
+console.log(filterArray([1, 2, 3, 4, 5], 5)); // []
+console.log(filterArray([12, 24, 8, 41, 76], 38)); // [41, 76]
+console.log(filterArray([12, 24, 8, 41, 76], 20)); // [24, 41, 76]
 
